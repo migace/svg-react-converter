@@ -26,10 +26,10 @@ npm install
 
 ```bash
 # Basic usage
-node src/app.js --input ./path/to/svg/files --output ./path/to/output
+node --experimental-strip-types src/app.js --input ./path/to/svg/files --output ./path/to/output
 
 # With custom SVGR config
-node src/app.js --input ./path/to/svg/files --output ./path/to/output --config ./svgr.config.js
+node --experimental-strip-types src/app.js --input ./path/to/svg/files --output ./path/to/output --config ./svgr.config.js
 ```
 
 ### Command Line Options
@@ -70,12 +70,12 @@ Output:
 ```
 /components
   /common
-    LogoIcon.tsx
-    IconIcon.tsx
+    Logo.tsx
+    Icon.tsx
     index.ts
   /social
-    TwitterIcon.tsx
-    FacebookIcon.tsx
+    Twitter.tsx
+    Facebook.tsx
     index.ts
 ```
 
@@ -83,8 +83,8 @@ The index.ts files will contain exports for all components in their respective d
 
 ```typescript
 // /components/common/index.ts
-export { default as LogoIcon } from './LogoIcon';
-export { default as IconIcon } from './IconIcon';
+export { default as logo } from './Logo';
+export { default as icon } from './Icon';
 ```
 
 ## How to use
