@@ -45,7 +45,6 @@ module.exports = {
   // Template for generated component
   template: ({ componentName, jsx }, { tpl }) => {
     const code = tpl`
-  import * as React from "react";
   import type { SVGProps } from "react";
   import { Ref, forwardRef, memo } from "react";
 
